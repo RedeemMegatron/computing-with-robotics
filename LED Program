@@ -1,0 +1,14 @@
+//LED Program
+ void setup() {  //Built in initialization block
+  pinMode(13, OUTPUT);  //Set digital pin 13 -> output
+  pinMode(12, OUTPUT);  //Set digital pin 12 -> output
+}
+
+void loop() {  //Main loop auto-repeats
+  digitalWrite(13, HIGH);  //Pin 13 = 5v, LED emits lights
+  digitalWrite(12, HIGH);  //Pin 12 = 5v, LED emits lihgts
+  delay(1200);  //...for 1.2 seconds 
+  digitalWrite(13, LOW);  //Pin 13 = 0v, LED no light
+  digitalWrite(12, LOW);  //Pin 12 = 0v, LED no light
+  delay(1200);  //...for 1.2 seconds
+}
