@@ -10,3 +10,35 @@ printf("The three random numbers are %d, %d, and %d\n", number, number1, number2
 scanf("%d", &number);
 scanf("%d", &number1);
 scanf("%d", &number2);
+
+//13.6#7mulnumtest.ch
+//declare
+int Fnum, Snum;
+double SumNumber, SumAnswer;
+//initialize
+Fnum = randint(1, 10);
+Snum = randint(1, 10);
+printf("The two numbers are %d and %d\n", Fnum, Snum);
+printf("What is the Sum of the two numbers?\n");
+scanf("%lf", &SumAnswer);
+SumNumber = Fnum+Snum;
+
+if(SumNumber==SumAnswer){
+	printf("Correct\n");
+}else{
+printf("Incorrect, the answer is %.lf\n",SumNumber);
+}
+
+#include <chplot.h>
+CPlot plot;
+array double x[]={1,2,3,4,5,6,7,8,9,10};
+array double y[10];
+
+y = 3*x;
+
+
+plot.title("y=3x");
+plot.label(PLOT_AXIS_X, "x");
+plot.label(PLOT_AXIS_Y, "y");
+
+plot.axisRange(PLOT_AXIS_X
