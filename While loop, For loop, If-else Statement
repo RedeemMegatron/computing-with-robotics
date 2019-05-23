@@ -1,1 +1,15 @@
+/13.6,#8Drive.ch
+//declare
+int Wage, Rage;
+//initialize
+printf("The age to drive is 16.\n");
+printf("Please enter your age to check if you can get your drives licence\n");
+scanf("%d", &Rage);
+Wage=16;
 
+if(Wage==Rage){
+	printf("You are able to drive\n");
+ }else{
+ printf("Sorry, you are too young to get a licence.\n");
+ }
+/
