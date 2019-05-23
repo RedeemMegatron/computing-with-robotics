@@ -1,1 +1,12 @@
 
+//13.6Exercise#5RandCreate.ch
+//declare
+int number, number1, number2;
+//initialize
+number = randint(1, 100);
+number1 = randint(1, 100);
+number2 = randint(1, 100);
+printf("The three random numbers are %d, %d, and %d\n", number, number1, number2);
+scanf("%d", &number);
+scanf("%d", &number1);
+scanf("%d", &number2);
