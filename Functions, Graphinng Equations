@@ -1,1 +1,78 @@
 
+double x;
+x=5;
+double y(double x){
+	return /*y=*/ 2*x;
+}
+
+printf("If x is %.lf, then y is %.lf\n", x, y(x));
+
+/*
+y(x) = 2*x
+y(1) = 2*1   y=2  x=1
+y(5) = 2*5   y=10 x=5
+
+create a function for: f(g) = 3g+5;
+
+print out the results for;
+f(5);
+f(7);*/
+double g;
+double f(double g){
+	return 3*g+5;
+}
+printf("f(5)=%.lf \n f(7)=%.lf\n",f(5), f(7));
+printf("If g is %d, then f(%d) is %.lf\n", 5, 5, f(5));
+printf("If g is %d, then f(%d) is %.lf\n", 7, 7, f(7));
+
+
+double k;
+double h(double k){
+return 3*k+5;
+}
+printf("h(5)=%.lf\n h(9)=%.lf\n",h(5), h(7));
+printf("If k is %d, then h(%d) is %.lf\n", 5, 5, h(5));
+printf("If k is %d, then h(%d) is %.lf\n", 9, 9, h(9));
+
+//Graphface3.ch
+#include<chplot.h>
+double func1(double x){
+	return 0;
+}
+int datanum;
+CPlot plot;
+/*Plotting confused Face*/
+plot.title("confused Face");
+plot.axisRange(PLOT_AXIS_X, 0,10);
+plot.axisRange(PLOT_AXIS_Y, 0,20);
+/*Background for the Face*/
+plot.func2D(0, 10, 500, func1);
+plot.plotType(PLOT_PLOTTYPE_FILLEDCURVES, datanum, "y1=20", "blue");
+/*Shape of Face*/
+plot.point(5,10);
+datanum=datanum+1;
+plot.pointType(datanum, 6,30,"black");
+/*Eyes of Face*/
+plot.point(4.5,12);
+datanum=datanum+1;
+plot.pointType(datanum, 8,5,"black");
+plot.point(5.5,12);
+datanum=datanum+1;
+plot.pointType(datanum, 6,7,"black");
+plot.point(4.5,12);
+datanum=datanum+1;
+plot.pointType(datanum, 7,2,"black");
+plot.point(5.5,12);
+datanum=datanum+1;
+plot.pointType(datanum, 7,2,"black");
+/*mouth of face*/
+plot.strokeColor("black");
+plot.line(4,10,6,10);
+datanum=datanum+1;
+plot.line(4.3,8,6.3,8);
+datanum=datanum+1;
+plot.line(4,10,4.3,8);
+datanum=datanum+1;
+plot.line(6,10,6.3,8);
+datanum=datanum+1;
+plot.plotting();
